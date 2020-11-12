@@ -6,7 +6,7 @@ from tqdm import trange
 from enum import Enum
 
 from mvg_distributions import covariance_representations as cov_rep
-import mvg_distributions.log_likelihoods as ll
+from mvg_distributions import log_likelihoods as ll
 from mvg_distributions.kl_divergence import kl_divergence_unit_gaussian, kl_divergence_mv_gaussian_v2
 from tensorflow.python.ops.distributions import kullback_leibler
 from tensorflow_probability.python.distributions import MultivariateNormalLinearOperator
