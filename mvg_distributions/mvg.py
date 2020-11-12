@@ -46,7 +46,7 @@ class MultivariateNormal(tfp.distributions.Distribution, DistSummary):
         :param name: Python `str` name prefixed to Ops created by this class.
         """
         parameters = locals()
-        with tf.name_scope(name):#, values=[loc]):
+        with tf.name_scope(name):
             self._loc = tf.identity(loc, name="loc")
             tf.assert_rank(self.loc, 2, message="loc must be a tensor of [batch size, event size]")
         self._cov_obj = cov_obj
