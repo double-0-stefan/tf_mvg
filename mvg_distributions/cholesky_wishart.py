@@ -1,8 +1,8 @@
 import tensorflow as tf
 from mvg_distributions import covariance_representations as cov_rep
 import numpy as np
-import tensorflow_probability
-from tensorflow_probability.python.distributions import seed_stream
+#from tensorflow_probability.python.distributions import seed_stream
+from tensorflow_probability.util import seed_stream
 
 
 class CholeskyWishart(tf.distributions.Distribution):
