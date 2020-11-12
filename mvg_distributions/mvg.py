@@ -1,5 +1,5 @@
 import tensorflow as tf
-import tensorflow_probability
+import tensorflow_probability as tfp
 import numpy as np
 import numpy.testing as npt
 from tqdm import trange
@@ -27,7 +27,7 @@ class DistSummary(abc.ABC):
         pass
 
 
-class MultivariateNormal(tf.distributions.Distribution, DistSummary):
+class MultivariateNormal(tfp.distributions.Distribution, DistSummary):
     def __init__(self, loc, cov_obj, validate_args=False, allow_nan_stats=True, name="MultivariateNormal"):
         """
         Multivariate Normal distribution using the Covariance class
