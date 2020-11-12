@@ -4,4 +4,4 @@ from mvg_distributions.mvg import MultivariateNormal, MultivariateNormalDiag, Mu
 from mvg_distributions.cholesky_wishart import CholeskyWishart
 from mvg_distributions.gamma import Gamma
 from mvg_distributions.covariance_representations import *
-import mvg_distributions.covariance_representations
+import covariance_representations
