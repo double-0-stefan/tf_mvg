@@ -7,7 +7,7 @@ import tensorflow_probability as tfp
 #from util import SeedStream
 
 
-class CholeskyWishart(tf.distributions.Distribution):
+class CholeskyWishart(tfp.distributions.Distribution):
     """
     If a p-dimensional vector x follows a multivariate Normal distribution x ~ N(mu, S)
     The inverse covariance S^{-1} = L follows a Wishart distribution L ~ WI(df, Scale)
