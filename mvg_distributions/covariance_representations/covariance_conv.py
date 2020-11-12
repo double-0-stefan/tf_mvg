@@ -107,7 +107,7 @@ class PrecisionConvFilters(Covariance):
         """
         with tf.name_scope('id_filters'):
             num_ch = 1
-            filter_wh = weights_precision.shape[-1].value
+            filter_wh = weights_precision.shape[-1]#.value
             filter_size = int(np.sqrt(filter_wh))
             identity_basis = tf.eye(num_rows=filter_wh)
             return tf.reshape(identity_basis, (filter_wh, filter_size, filter_size, num_ch, num_ch))
