@@ -3,8 +3,8 @@ from mvg_distributions import covariance_representations as cov_rep
 import numpy as np
 #from tensorflow_probability.python.distributions import seed_stream
 
-from tensorflow_probability import util
-from util import SeedStream
+import tensorflow_probability as tfp
+#from util import SeedStream
 
 
 class CholeskyWishart(tf.distributions.Distribution):
@@ -285,7 +285,7 @@ class CholeskyWishart(tf.distributions.Distribution):
         batch_shape = self.batch_shape_tensor()
         event_shape = self.event_shape_tensor()
 
-        stream = SeedStream(seed=seed, salt="Wishart")
+        stream = tfp.util.SeedStream(seed=seed, salt="Wishart")
 
         shape = tf.concat([[n], batch_shape, event_shape], 0)
 
@@ -317,7 +317,7 @@ class CholeskyWishart(tf.distributions.Distribution):
         nb_half = nb // 2 + 1
         nch = 1  # Number of channels in the image
 
-        stream = SeedStream(seed=seed, salt="Wishart")
+        stream = tfp.util.SeedStream(seed=seed, salt="Wishart")
 
         shape = tf.concat([batch_shape, [iw, iw, nb_half - 1]], 0)
 
