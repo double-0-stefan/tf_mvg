@@ -4,7 +4,7 @@ import numpy as np
 #from tensorflow_probability.python.distributions import seed_stream
 
 from tensorflow_probability import util
-from tensorflow_probability.util import SeedStream
+from util import SeedStream
 
 
 class CholeskyWishart(tf.distributions.Distribution):
