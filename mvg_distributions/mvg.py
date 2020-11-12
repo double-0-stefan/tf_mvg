@@ -14,7 +14,7 @@ from tensorflow_probability.python.distributions import MultivariateNormalLinear
 import math
 import abc
 
-tfd = tensorflow_probability.distributions
+tfd = tfp.distributions
 
 
 class DistSummary(abc.ABC):
